@@ -70,7 +70,7 @@ class ChallengeController
 
         const statusDoc = await Status.findOneAndUpdate(
             {},
-            { ProvaLiberada: true},
+            { status: true},
             { new: true }
         )
 
@@ -82,7 +82,7 @@ class ChallengeController
     {
         const statusDoc = await Status.findOneAndUpdate(
             {},
-            { ProvaLiberada: false},
+            { status: false},
             { new: true }
         )
         res.send('Valores atualizados!');
