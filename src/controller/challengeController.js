@@ -70,8 +70,7 @@ class ChallengeController
 
         const statusDoc = await Status.findOneAndUpdate(
             {},
-            { status: true},
-            { new: true }
+            { status: true}
         )
 
         tempoProva = tempo_Prova;
@@ -82,8 +81,7 @@ class ChallengeController
     {
         const statusDoc = await Status.findOneAndUpdate(
             {},
-            { status: false},
-            { new: true }
+            { status: false}
         )
         res.send('Valores atualizados!');
     }
