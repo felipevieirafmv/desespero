@@ -1,7 +1,6 @@
 const { Status } = require("../model/status");
 
 let tempoProva = 30;
-let ProvaLiberada = false;
 let f1 = 2;
 let f2 = 3;
 let f3 = 5;
@@ -12,6 +11,7 @@ class ChallengeController
 {
     static async get(req, res) 
     {
+        return res.status(404).send({ error: 'AAAAAAAAAAAAAA' });
         const statusDoc = await Status.findOne();
 
         if(!statusDoc)
