@@ -18,7 +18,7 @@ class ChallengeController
         if(!statusDoc)
             return res.status(404).send({ error: 'Status not found' });
 
-        const teste = statusDoc.status
+        const teste = statusDoc[0].status
 
         console.log(teste)
 
