@@ -9,9 +9,11 @@ let f5 = 10;
 
 class ChallengeController
 {
-    static async get(req, res) 
+    static async get(req, res)
     {
-        const statusDoc = await Status.findOne();
+        const statusDoc = await Status.find();
+
+        console.log(statusDoc)
 
         if(!statusDoc)
             return res.status(404).send({ error: 'Status not found' });
