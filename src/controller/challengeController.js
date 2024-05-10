@@ -20,7 +20,7 @@ class ChallengeController
 
         const teste = statusDoc.status
 
-        return res.json({ 
+        return res.send({ 
             tempoProva, 
             teste,
             f1,
