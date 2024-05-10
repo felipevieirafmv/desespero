@@ -20,6 +20,8 @@ class ChallengeController
 
         const teste = statusDoc.status
 
+        console.log(teste)
+
         return res.send({ 
             tempoProva, 
             teste,
@@ -32,6 +34,7 @@ class ChallengeController
     }
 
     static async post(req, res) {
+
         let statusDoc = await Status.findOne(); 
         if (!statusDoc) {
             statusDoc = new Status({ status: true });
