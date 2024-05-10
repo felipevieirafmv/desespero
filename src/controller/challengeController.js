@@ -11,7 +11,6 @@ class ChallengeController
 {
     static async get(req, res) 
     {
-        return res.status(404).send({ error: 'AAAAAAAAAAAAAA' });
         const statusDoc = await Status.findOne();
 
         if(!statusDoc)

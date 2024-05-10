@@ -1,6 +1,6 @@
 const express = require('express');
-const router = express.Router();
 const ChallengeController = require("../controller/challengeController");
+const router = express.Router();
 
 router
     .get('/', ChallengeController.get)
