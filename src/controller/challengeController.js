@@ -14,9 +14,14 @@ class ChallengeController
     {
         const statusDoc = await Status.findOne();
 
+        if(!statusDoc)
+            return res.status(404).send({ error: 'Status not found' });
+
+        const teste = statusDoc.status
+
         return res.json({ 
             tempoProva, 
-            statusDoc,
+            teste,
             f1,
             f2,
             f3,
@@ -45,7 +50,7 @@ class ChallengeController
         } = req.body;
 
         tempoProva = tempo_Prova;
-        ProvaLiberada = statusDoc;
+        ProvaLiberada = statusDoc.status;
         f1 = f1_;
         f2 = f2_;
         f3 = f3_;
