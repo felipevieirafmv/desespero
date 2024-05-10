@@ -55,6 +55,7 @@ class ChallengeController
 
         tempoProva = tempo_Prova;
         ProvaLiberada = statusDoc.status;
+        console.log(ProvaLiberada)
         f1 = f1_;
         f2 = f2_;
         f3 = f3_;
