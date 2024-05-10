@@ -24,7 +24,7 @@ class ChallengeController
 
         return res.send({ 
             tempoProva, 
-            status: teste,
+            ProvaLiberada: teste,
             f1,
             f2,
             f3,
